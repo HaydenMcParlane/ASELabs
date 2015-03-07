@@ -13,7 +13,7 @@ namespace Lab7Service
     // NOTE: In order to launch WCF Test Client for testing this service, please select Login.svc or Login.svc.cs at the Solution Explorer and start debugging.
     public class Login : ILogin
     {       
-        [WebInvoke(Method="POST", ResponseFormat=WebMessageFormat.Json, UriTemplate = "/{username}/{password}")]
+        [WebInvoke(Method="GET", ResponseFormat=WebMessageFormat.Json, UriTemplate = "/{username}/{password}")]
         public bool Authenticate(string username, string password)
         {                        
             bool resp = false;                               
@@ -39,7 +39,7 @@ namespace Lab7Service
             return resp;
         }
 
-        [WebInvoke(Method="POST", ResponseFormat=WebMessageFormat.Json, UriTemplate="/Register/{username}/{password}")]
+        [WebInvoke(Method="GET", ResponseFormat=WebMessageFormat.Json, UriTemplate="/Register/{username}/{password}")]
         public bool Register(string username, string password)
         {
             try

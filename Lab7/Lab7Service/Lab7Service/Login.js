@@ -1,4 +1,4 @@
-﻿const LOGIN_BASE = "localhost:59510/Login.svc/";
+﻿const LOGIN_BASE = "localhost:59510/Login.svc/service.svc";
 
 function $(id) {
     return document.getElementById(id);
@@ -31,7 +31,7 @@ function httpGet(url) {
     var xmlHttp = null;
 
     xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("POST", url, true);    
+    xmlHttp.open("GET", url, true);    
     xmlHttp.send(null);
     return xmlHttp.responseText;
 
