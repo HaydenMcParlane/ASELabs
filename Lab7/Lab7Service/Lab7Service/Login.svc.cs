@@ -19,7 +19,7 @@ namespace Lab7Service
             bool resp = false;                               
 
             //Connect to DB
-            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\Hayden\\Documents\\Lab7DB.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\Hayden\\Documents\\DB.mdf;Integrated Security=True;Connect Timeout=30");
 
             //Open connection
             conn.Open();
@@ -44,7 +44,7 @@ namespace Lab7Service
         {
             try
             {
-                SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\Hayden\\Documents\\Lab7DB.mdf;Integrated Security=True;Connect Timeout=30");
+                SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\Hayden\\Documents\\DB.mdf;Integrated Security=True;Connect Timeout=30");
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("Insert Into Users(Username, Password) Values ('" + username + "', '" + password + "')", conn);
                 cmd.ExecuteNonQuery();
