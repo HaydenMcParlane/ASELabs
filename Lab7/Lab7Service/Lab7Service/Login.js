@@ -1,4 +1,4 @@
-﻿const LOGIN_BASE = "localhost:59510/Login.svc/service.svc";
+﻿const LOGIN_BASE = "http://localhost:59510/Login.svc/";
 
 function $(id) {
     return document.getElementById(id);
